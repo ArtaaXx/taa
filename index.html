@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokiPro - Jasa Joki Game Terpercaya</title>
+    <style>
+        /* --- CSS STYLING --- */
+        :root {
+            --primary: #00ff88; /* Warna Hijau Neon */
+            --dark: #121212;
+            --dark-card: #1e1e1e;
+            --text: #ffffff;
+            --gray: #b3b3b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(18, 18, 18, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #00cc6a;
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .game-card {
+            background-color: var(--dark-card);
+            padding: 30px;
+            border-radius: 10px;
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+
+        .game-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .game-card h3 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .price-tag {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* How It Works */
+        .steps {
+            background-color: var(--dark-card);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .step-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .step-number {
+            background-color: var(--primary);
+            color: var(--dark);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 5%;
+            text-align: center;
+            background-color: #000;
+            color: var(--gray);
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Sederhana: sembunyikan menu di HP */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">JOKI<span style="color:white">PRO</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Layanan</a>
+            <a href="#steps">Cara Order</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Ranking <span>Rank</span> Cepat & Aman</h1>
+        <p>Jasa joki game profesional dengan pengerjaan cepat, akun aman, dan harga bersahabat. Jangan biarkan rankmu stagnan!</p>
+        <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20mau%20tanya%20joki%20game" class="btn">Pesan Sekarang</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Game Populer</h2>
+        <div class="game-grid">
+            <!-- Card 1 -->
+            <div class="game-card">
+                <h3>Mobile Legends</h3>
+                <p>Ranking Mythic, Battle Pass, Skin.</p>
+                <span class="price-tag">Mulai Rp 15.000</span>
+                <br>
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20mau%20joki%20MLBB" class="btn" style="font-size:0.8rem; padding: 8px 15px;">Order</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="game-card">
+                <h3>PUBG Mobile</h3>
+                <p>Ranking Conqueror, Level Up.</p>
+                <span class="price-tag">Mulai Rp 20.000</span>
+                <br>
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20mau%20joki%20PUBG" class="btn" style="font-size:0.8rem; padding: 8px 15px;">Order</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="game-card">
+                <h3>Valorant</h3>
+                <p>Ranking Ascendant, Immortal.</p>
+                <span class="price-tag">Mulai Rp 25.000</span>
+                <br>
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20mau%20joki%20Valorant" class="btn" style="font-size:0.8rem; padding: 8px 15px;">Order</a>
+            </div>
+            <!-- Card 4 -->
+            <div class="game-card">
+                <h3>Genshin Impact</h3>
+                <p>World Level, Daily Commission.</p>
+                <span class="price-tag">Mulai Rp 10.000</span>
+                <br>
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20mau%20joki%20Genshin" class="btn" style="font-size:0.8rem; padding: 8px 15px;">Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="steps" id="steps">
+        <h2 class="section-title">Cara Pemesanan</h2>
+        <div class="step-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h3>Hubungi Admin</h3>
+                <p>Klik tombol WhatsApp untuk konsultasi harga dan jadwal.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h3>Bayar DP</h3>
+                <p>Lakukan pembayaran DP (Down Payment) untuk mengamankan slot.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h3>Proses Joki</h3>
+                <p>Kami akan memproses joki sesuai kesepakatan waktu.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h3>Selesai & Sisa</h3>
+                <p>Setelah selesai, akun dikembalikan dan bayar sisa tagihan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2023 JokiPro Services. All Rights Reserved.</p>
+        <p>Hubungi kami: 0812-3456-7890 (WhatsApp)</p>
+    </footer>
+
+</body>
+</html>
